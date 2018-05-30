@@ -1,0 +1,211 @@
+[
+  {
+    "title" : "작업소스",
+    "color" : "#78c0fd",
+    "icon"  : "menu_ic_charge",
+    "arr"   : "common_arr_btm_blue",
+    "items" : [
+      {
+        "title" : "팝업&퍼미션&얼럿",
+        "icon"  : "menu_ic_charge_1",
+        "idName" : "popupPermissionAlert"
+      },
+      {
+        "title" : "간편 요금 조회",
+        "icon"  : "menu_ic_charge_2",
+        "idName" : "simpleContract"
+      },
+      {
+        "title" : "실시간 요금 계산",
+        "icon"  : "menu_ic_charge_3",
+        "idName" : "realTimeBill"
+      },
+
+      {
+        "title" : "자가 검침",
+        "icon"  : "menu_ic_charge_4",
+        "idName" : "selfReading"
+      },
+
+      {
+        "title" : "가스 요금표",
+        "icon"  : "menu_ic_charge_5",
+        "idName" : "cost"
+      },
+
+      {
+        "title" : "모바일 청구서 관리",
+        "icon"  : "menu_ic_charge_6",
+        "idName" : "mobileBill"
+      },
+
+      {
+        "title" : "전기 요금 조회",
+        "icon"  : "menu_ic_charge_7",
+        "idName" : "electricityBill"
+      }
+    ]
+  },
+
+  {
+    "title" : "납부",
+    "color" : "#98D8A6",
+    "icon"  : "menu_ic_pay",
+    "arr"   : "common_arr_btm_green",
+    "items" : [
+      {
+        "title" : "요금납부",
+        "icon"  : "menu_ic_pay_1",
+        "idName" : "payBill"
+      },
+      {
+        "title" : "자동이체 관리",
+        "icon"  : "menu_ic_pay_2",
+        "idName" : "automaticPayment"
+      },
+      {
+        "title" : "과오납 조회·환불",
+        "icon"  : "menu_ic_pay_3",
+        "idName" : "overPayment"
+      },
+      {
+        "title" : "분할 납부 확약서",
+        "icon"  : "menu_ic_pay_4",
+        "idName" : "splitPayment"
+      },
+      {
+        "title" : "도시가스요금 경감요청",
+        "icon"  : "menu_ic_pay_5",
+        "idName" : "alleviation"
+      }
+    ]
+  },
+
+  {
+    "title" : "예약",
+    "color" : "#B59ADE",
+    "icon"  : "menu_ic_reserve",
+    "arr"   : "common_arr_btm_purple",
+    "items" : [
+      {
+        "title" : "이사(전출)",
+        "icon"  : "menu_ic_reserve_1",
+        "idName" : "movingOut"
+      },
+      {
+        "title" : "이사(전입)",
+        "icon"  : "menu_ic_reserve_2",
+        "idName" : "movingIn"
+      },
+      {
+        "title" : "방문 예약",
+        "icon"  : "menu_ic_reserve_3",
+        "idName" : "schedule"
+      }
+    ]
+  },
+  {
+    "title" : "혜택",
+    "color" : "#48cfad",
+    "icon"  : "menu_ic_cash",
+    "arr"   : "common_arr_btm_mint",
+    "items" : [
+      {
+        "title" : "캐시 조회",
+        "icon"  : "menu_ic_cash_1",
+        "idName" : "cashSearch"
+      },
+      {
+        "title" : "캐시 적립",
+        "icon"  : "menu_ic_cash_2",
+        "idName" : "cashSave"
+      },
+      {
+        "title" : "캐시 사용",
+        "icon"  : "menu_ic_cash_3",
+        "idName" : "cashUsed"
+      },
+
+      {
+        "title" : "잠금화면 설정",
+        "icon"  : "menu_ic_cash_4",
+        "idName" : "lockSetting"
+      },
+
+      {
+        "title" : "가스락 회원 정보",
+        "icon"  : "menu_ic_cash_5",
+        "idName" : "lockMemberInfo"
+      }
+    ]
+  },
+  {
+    "title" : "기타",
+    "color" : "#F4C574",
+    "icon"  : "menu_ic_other",
+    "arr"   : "common_arr_btm_yellow",
+    "items" : [
+      {
+        "title" : "도시가스 이용 안내",
+        "icon"  : "menu_ic_other_1",
+        "idName" : "useGuide"
+      },
+      {
+        "title" : "자주 하는 질문",
+        "icon"  : "menu_ic_other_2",
+        "idName" : "qna"
+      },
+      {
+        "title" : "가스 냄새 신고",
+        "icon"  : "menu_ic_other_3",
+        "idName" : "gasReport"
+      },
+      {
+        "title" : "굴착 공사 신고",
+        "icon"  : "menu_ic_other_4",
+        "idName" : "drillingReport"
+      },
+      {
+        "title" : "관할 고객센터 검색",
+        "icon"  : "menu_ic_other_5",
+        "idName" : "callCenterSearch"
+      },
+      {
+        "title" : "전국 도시가스 관할 조회",
+        "icon"  : "menu_ic_other_6",
+        "idName" : "nationalCallCenterSearch"
+      },
+      {
+        "title" : "공급중지 보류 요청",
+        "icon"  : "menu_ic_other_7",
+        "idName" : "supplyHold"
+      },
+      {
+        "title" : "보증보험 정보",
+        "icon"  : "menu_ic_other_8",
+        "idName" : "insurance"
+      },
+      {
+        "title" : "고객의 소리",
+        "icon"  : "menu_ic_other_9",
+        "idName" : "customerSpeak"
+      },
+      {
+        "title" : "공지사항",
+        "icon"  : "menu_ic_other_10",
+        "idName" : "notice"
+      },
+      {
+        "title" : "이용 약관",
+        "icon"  : "menu_ic_other_11",
+        "idName" : "eula"
+      },
+      {
+        "title" : "개인정보 처리방침",
+        "icon"  : "menu_ic_other_12",
+        "idName" : "privacy"
+      }
+    ]
+  }
+
+]

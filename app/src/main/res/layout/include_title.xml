@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@android:color/white">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:src="@drawable/ic_backspace"/>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/text_4d4d4d"
+        android:textSize="@dimen/text_title"
+        android:paddingLeft="56dp"
+        android:paddingRight="56dp"
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/btnOption"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical"
+        android:textColor="@color/text_4d4d4d"
+        android:background="@null"
+        android:minWidth="64dp"
+        android:textSize="@dimen/text_51px"
+        android:text="@string/label_enter"
+        android:visibility="gone"/>
+    <View
+        android:id="@+id/bottomLine"
+        style="@style/BottomLine"/>
+</FrameLayout>
