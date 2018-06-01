@@ -41,26 +41,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //fcm token 가져오기
         FCMHelper.init(this);
-
-
-        // 권한 체크 폰번호 가져오기
-        PhoneNumberGetHelper.getPhoneNumber(this, phoneNumber -> {
-            if (phoneNumber.contains("+82")) {
-                phoneNumber = phoneNumber.replace("+82", "0");
-            }
-            Log.i("gusalnim","phoneNumber : " + phoneNumber);
-        });
-
-        /*PhoneNumberGetHelper.getPhoneNumber(this, new PhoneNumberGetHelper.Callback() {
-            @Override
-            public void onData(String phoneNumber) {
-                if (phoneNumber.contains("+82")) {
-                    phoneNumber = phoneNumber.replace("+82", "0");
-                }
-                Log.i("gusalnim","phoneNumber : " + phoneNumber);
-            }
-        });*/
 
         initUi();
 

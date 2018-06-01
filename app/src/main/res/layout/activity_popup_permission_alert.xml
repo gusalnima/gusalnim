@@ -13,23 +13,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btnPopup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="11dp"
-            android:paddingTop="11dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="@string/label_enter"
-                android:textColor="@color/text_4d4d4d"
-                android:textSize="@dimen/text_43px"
-                android:textStyle="bold" />
-        </LinearLayout>
-
+            android:text="팝업"/>
         <View style="@style/BottomLine" />
+        <Button
+            android:id="@+id/btnChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선택"/>
+        <View style="@style/BottomLine" />
+        <Button
+            android:id="@+id/btnPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="문자보내기 퍼미션"/>
     </LinearLayout>
 </LinearLayout>
