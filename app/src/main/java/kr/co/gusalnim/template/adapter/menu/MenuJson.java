@@ -2,6 +2,7 @@ package kr.co.gusalnim.template.adapter.menu;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,18 +46,25 @@ public class MenuJson {
             for (int i = 0; i < jObj.length(); i++) {
                 jo_inside = jObj.getJSONObject(i);
                 JSONArray ja = jo_inside.getJSONArray("items");
-                int size = ja.length();
-                list = new LinkedList<Menus.OneDep.TwoDep>();
-                for (int j = 0; j < size; j++) {
-                    JSONObject jo = ja.getJSONObject(j);
-                    if (jo != null) {
-                        list.add(new Menus.OneDep.TwoDep(jo.optString("title"), jo.optString("icon"), jo.optString("idName")));
+                if(null != ja) {
+                    int size = ja.length();
+                    list = new LinkedList<Menus.OneDep.TwoDep>();
+                    for (int j = 0; j < size; j++) {
+                        JSONObject jo = ja.getJSONObject(j);
+                        if (jo != null) {
+                            list.add(new Menus.OneDep.TwoDep(jo.optString("title"), jo.optString("icon"), jo.optString("idName")));
+                        }
                     }
                 }
-                oneMenu.add(new Menus.OneDep(jo_inside.getString("title"), jo_inside.getString("color"), jo_inside.getString("icon"), jo_inside.getString("arr"), list));
+                if(jo_inside.has("idName")){
+                    oneMenu.add(new Menus.OneDep(jo_inside.getString("title"), jo_inside.getString("color"), jo_inside.getString("icon"), jo_inside.getString("arr"), jo_inside.getString("idName"), list));
+                } else {
+                    oneMenu.add(new Menus.OneDep(jo_inside.getString("title"), jo_inside.getString("color"), jo_inside.getString("icon"), jo_inside.getString("arr"), null, list));
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
+            Log.i("gusalnim",e.getLocalizedMessage());
         }
         return oneMenu;
     }

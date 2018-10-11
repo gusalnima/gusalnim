@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        style="@style/BoxDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <kr.co.gusalnim.template.util.CustomLoginView
+            android:id="@+id/kakao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bg="@color/colorPrimaryDark"
+            app:symbol="@drawable/menu_ic_cash_1"
+            app:text="카카오톡"
+            app:textColor="@color/text_ffffff"/>
+        <kr.co.gusalnim.template.util.CustomLoginView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bg="@color/colorPrimary"
+            app:symbol="@drawable/menu_ic_cash_2"
+            app:text="카카오톡"
+            app:textColor="@color/text_ffffff"/>
+        <kr.co.gusalnim.template.util.CustomLoginView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bg="@color/colorPrimaryDark"
+            app:symbol="@drawable/menu_ic_cash_3"
+            app:text="카카오톡"
+            app:textColor="@color/text_ffffff"/>
+        <kr.co.gusalnim.template.util.CustomLoginView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bg="@drawable/character_red"
+            app:symbol="@drawable/menu_ic_cash_3"
+            app:text="카카오톡"
+            app:textColor="@color/text_ffffff"/>
+        <kr.co.gusalnim.template.util.CircleView
+            android:id="@+id/circleView"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            app:circleGap="0dp"
+            app:circleRadius="50dp"
+            app:fillColor="@color/colorPrimary"
+            app:strokeColor="@color/colorPrimaryDark"
+            app:strokeWidth="0dp"
+            />
+        <kr.co.gusalnim.template.util.CircleView2
+            android:id="@+id/circleView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

@@ -86,6 +86,27 @@
             android:name=".PopupPermissionAlertActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".TestCustomViewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".TestCustomViewCalendarActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".TestCustomViewRoundActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".TestRouletteAvtivity"
+            android:screenOrientation="portrait">
+        </activity>
+
 
         <service
             android:name=".fcm.RegistrationIntentService"

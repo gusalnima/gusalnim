@@ -11,13 +11,15 @@ public class Menus {
         private String color;
         private String icon;
         private String arr;
+        private String idName;
         public List<TwoDep> twoDep;
 
-        public OneDep(String title, String color, String icon, String arr, List<TwoDep> items) {
+        public OneDep(String title, String color, String icon, String arr, String idName, List<TwoDep> items) {
             this.title = title;
             this.color = color;
             this.icon = icon;
             this.arr = arr;
+            this.idName = idName;
             this.twoDep = items;
         }
 
@@ -35,6 +37,10 @@ public class Menus {
 
         public String getArr() {
             return arr;
+        }
+
+        public String getIdName() {
+            return idName;
         }
 
         public List<TwoDep> getTwoDep() {

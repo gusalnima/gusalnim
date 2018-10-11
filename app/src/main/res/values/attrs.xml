@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="LoginButton">
+        <attr name="bg" format="reference|integer"/>
+        <attr name="symbol" format="reference|integer"/>
+        <attr name="text" format="reference|string"/>
+        <attr name="textColor" format="reference|integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeColor" format="reference|integer"/>
+        <attr name="fillColor" format="reference|integer"/>
+        <attr name="circleRadius" format="dimension"/>
+        <attr name="circleGap" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TestCalendarView">
+        <attr name="bgColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TestRouletteView">
+        <attr name="circleColor" format="color"/>
+    </declare-styleable>
+</resources>

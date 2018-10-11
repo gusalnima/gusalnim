@@ -24,7 +24,6 @@ import kr.co.gusalnim.template.adapter.menu.MenuTwoItemViewHolder;
 import kr.co.gusalnim.template.fcm.FCMHelper;
 import kr.co.gusalnim.template.net.dao.Menus;
 import kr.co.gusalnim.template.util.MessageHelper;
-import kr.co.gusalnim.template.util.PhoneNumberGetHelper;
 
 public class MainActivity extends BaseActivity {
 
@@ -94,6 +93,16 @@ public class MainActivity extends BaseActivity {
                 MenuTwoItem menuTwoItem = (MenuTwoItem) o;
                 if ("popupPermissionAlert".equals(menuTwoItem.getIdName())) {
                     startActivity(new Intent(MainActivity.this,PopupPermissionAlertActivity.class));
+                } else if ("search".equals(menuTwoItem.getIdName())) {
+                    startActivity(new Intent(MainActivity.this,SearchActivity.class));
+                } else if ("testCustomView".equals(menuTwoItem.getIdName())) {
+                    startActivity(new Intent(MainActivity.this,TestCustomViewActivity.class));
+                } else if ("testCustomViewCalendar".equals(menuTwoItem.getIdName())) {
+                    startActivity(new Intent(MainActivity.this,TestCustomViewCalendarActivity.class));
+                } else if ("testCustomViewRound".equals(menuTwoItem.getIdName())) {
+                    startActivity(new Intent(MainActivity.this,TestCustomViewRoundActivity.class));
+                } else if ("testRoollet".equals(menuTwoItem.getIdName())) {
+                    startActivity(new Intent(MainActivity.this,TestRouletteAvtivity.class));
                 }
             }
         }
@@ -151,7 +160,7 @@ public class MainActivity extends BaseActivity {
             final int resourceId = resources.getIdentifier(oneDep.getIcon(), "drawable", this.getPackageName());
             final int arrId = resources.getIdentifier(oneDep.getArr(), "drawable", this.getPackageName());
             Collections.reverse(oneDep.getTwoDep());
-            itemList.add(new MenuOneItem(resourceId, oneDep.getTitle(), oneDep.getColor(), arrId, oneDep.getTwoDep(), isLast, 0));
+            itemList.add(new MenuOneItem(resourceId, oneDep.getTitle(), oneDep.getColor(), arrId, oneDep.getIdName(), oneDep.getTwoDep(), isLast, 0));
             Log.i("gusalnim","oneDep.getTitle() : " + oneDep.getTitle());
         }
         flexAdapter.setModels(itemList);
@@ -160,18 +169,21 @@ public class MainActivity extends BaseActivity {
 
     private void loadTwoMenu(MenuOneItem menuOneItem) {
         menuOneItem.setArr(true);
-        List<Menus.OneDep.TwoDep> twoMenu = menuOneItem.getTwoDep();
-        int position = flexAdapter.getItemPosition(menuOneItem);
-        Log.i("gusalnim","position : " + position);
-        linearLayoutManager.scrollToPositionWithOffset(position - 1, 0);
-        if (position == -1) return;
-        else position++;
-        menuOneItem.setLoaded(true);
-        for (Menus.OneDep.TwoDep twoDep : twoMenu) {
-            final int resourceId = resources.getIdentifier(twoDep.getIcon(), "drawable", this.getPackageName());
-            Log.i("gusalnim","position1 : " + position);
-            flexAdapter.addItem(position, new MenuTwoItem(twoDep.getTitle(), resourceId, twoDep.getIdName(), 1));
+        if(null != menuOneItem.getTwoDep()){
+            List<Menus.OneDep.TwoDep> twoMenu = menuOneItem.getTwoDep();
+            int position = flexAdapter.getItemPosition(menuOneItem);
+            Log.i("gusalnim","position : " + position);
+            linearLayoutManager.scrollToPositionWithOffset(position - 1, 0);
+            if (position == -1) return;
+            else position++;
+            menuOneItem.setLoaded(true);
+            for (Menus.OneDep.TwoDep twoDep : twoMenu) {
+                final int resourceId = resources.getIdentifier(twoDep.getIcon(), "drawable", this.getPackageName());
+                Log.i("gusalnim","position1 : " + position);
+                flexAdapter.addItem(position, new MenuTwoItem(twoDep.getTitle(), resourceId, twoDep.getIdName(), 1));
+            }
         }
+
         //flexAdapter.notifyItemChanged(position - 1);
     }
 
